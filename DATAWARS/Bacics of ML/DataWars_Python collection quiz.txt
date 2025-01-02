@@ -1,0 +1,443 @@
+1. Which of the following options are correct about the list?
+
+Check all the correct answers.
+
+
+a)append() method adds an element to the end of the list.
+
+
+b)pop() method removes an element from the end of the list.
+
+
+c)pop() method removes an element from the beginning of the list.
+
+
+d)insert() method adds an element to the beginning, middle, or end of the list.
+
+
+e)append() method adds an element to the beginning of the list.
+
+Correct! a,b,d
+
+2. Which of the following is true about a Python dictionary?
+
+Check all the correct answers.
+
+Assuming the version of Python is 3.7+
+
+
+a. It can only contain elements of the same data type.
+
+
+b. It can be modified once it is created.
+
+
+c. It is an ordered collection of elements.
+
+
+d. It is accessed by index.
+
+Correct! b,c
+
+3. Which of the following methods can be used to add a key-value pair to a Python dictionary?
+
+Choose the correct answer.
+
+
+a. insert()
+
+
+b. remove()
+
+
+c. update()
+
+
+d. append()
+
+Correct! c
+
+4. Which of the following methods can be used to get a list of key-value pairs from a Python dictionary?
+
+Choose the correct answer.
+
+
+a. sort()
+
+
+b. items()
+
+
+c. values()
+
+
+d. keys()
+
+Correct! b
+
+5. Which of the following is true about slicing in Python lists?
+
+Choose the correct answer.
+
+
+a. It is possible to slice a list from both the beginning and end.
+
+
+b. It is only possible to slice a list from a specific index to the end.
+
+
+c. Slicing is not possible in Python lists.
+
+
+d. It is only possible to slice a list from the beginning to a specific index.
+
+Correct! a
+
+6. Which of the following methods can be used to remove a specific element from a Python list?
+
+Choose the correct answer.
+
+
+a. sort()
+
+
+b. remove()
+
+
+c. pop()
+
+
+d. append()
+
+Correct! b
+
+7. Which of the following is true about a Python List and Dictionary?
+
+Check all the correct answers.
+
+
+a. A dictionary can contain keys and values of different data types.
+
+
+b. A dictionary can only contain values of the same data type.
+
+
+c. A list can only contain numeric data types.
+
+
+d. A list can contain elements of different data types.
+
+
+e. A list can only contain elements of the same data type.
+
+Correct! a ,d
+
+8. Which of the following methods can be used to add multiple elements to a Python list at once?
+
+Choose the correct answer.
+
+
+a. append()
+
+
+b. extend()
+
+
+c. remove()
+
+
+d. insert()
+
+Correct!b
+
+9.Which of the following is true about the zip() function in Python?
+
+Choose the correct answer.
+
+
+a. It is used to create a dictionary from two or more lists.
+
+
+b. It is used to combine two or more lists into a single list.
+
+
+c. It is used to sort a list in ascending order.
+
+
+d. It is used to create a list of tuples from two or more lists
+
+Correct! d
+
+10/ What is the output of the following code?
+
+my_list = [1, 2, 3, 4, 5]
+my_list[-1:-4:-1] = [0, 0, 0]
+print(my_list)
+
+a. [1, 2, 3, 4, 5, 0]
+
+
+b. [1, 2, 0, 4, 5]
+
+
+c. [1, 2, 0, 0, 0]
+
+
+d. [0, 2, 3, 4, 5]
+
+Correct! c
+
+11. Which of the following is a valid way to create an empty dictionary in Python?
+
+Check all the correct answers.
+
+
+a. my_dict = ()
+
+
+b. my_dict = dict()
+
+
+c. my_dict = {}
+
+
+d. my_dict = set()
+
+Correct! b,c
+
+12. What is the output of the following code?
+
+my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+print(my_dict.get('banana', 0), end=',')
+print(my_dict.get('orange', 0))
+
+a. 2, 0
+
+
+b. None, None
+
+
+c. 2, None
+
+
+d. None, 0
+
+Correct! a
+
+13. What is the output of the following code?
+
+my_list = [1, 2, 3]
+my_dict = {'a': 'apple', 'b': 'banana'}
+print(my_list + list(my_dict.values()))
+
+a. [1, 2, 3, ['apple', 'banana']]
+
+
+b. [1, 2, 3, 'a', 'b', 'apple', 'banana']
+
+
+c. [1, 2, 3, 'apple', 'banana']
+
+
+d. [1, 2, 3, {'a': 'apple', 'b': 'banana'}]
+
+Correct! c
+
+14. Which of the following is a valid way to add a new key-value pair to a dictionary in Python?
+
+Check all the correct answers.
+
+
+a. my_dict.add(key, value)
+
+
+b. my_dict.insert(key, value)
+
+
+c. my_dict[key] = value
+
+
+d. my_dict.update(key, value)
+
+Correct! c
+
+15. What is the output of the following code?
+
+my_list = [1, 2, 3]
+print([i * 2 for i in my_list])
+
+a. [1, 2, 3, 4, 5, 6]
+
+
+b. [2, 4, 6]
+
+
+c. [1, 4, 9]
+
+
+d. [1, 2, 3, 1, 2, 3]
+
+Correct! b
+
+16. Which of the following methods can be used to sort a Python list in place?
+
+Check all the correct answers.
+
+
+a. sorted()
+
+
+b. sort()
+
+
+c. reverse()
+
+
+d. index()
+
+Correct! b
+
+17. Which of the following is valid way to create a dictionary
+
+Which of the following is a valid way to create a dictionary with keys based on a list and values based on a second list of the same length?
+
+
+a. my_dict = {['a', 'b', 'c']: [1, 2, 3]}
+
+
+b. my_dict = dict(zip([1, 2, 3], ['a', 'b', 'c']))
+
+
+c. my_dict = dict([1, 2, 3], ['a', 'b', 'c'])
+
+
+d. my_dict = {1: 'a', 2: 'b', 3: 'c'}
+
+Correct! b
+
+18. What is the output of the following code?
+
+my_list = [x**2 for x in range(10) if x % 2 == 0]
+print(my_list)
+
+a. [2, 6, 10, 14, 18]
+
+
+b. [1, 3, 5, 7, 9]
+
+
+c. [0, 4, 16, 36, 64]
+
+
+d. [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+Correct! c
+
+19. Which of the following is a valid way to remove a key-value pair from a Python dictionary?
+
+Check the correct answers.
+
+
+a. my_dict.remove('key')
+
+
+b. my_dict.delete('key')
+
+
+c. my_dict.pop('key')
+
+
+d. my_dict.popitem('key')
+
+Correct! c
+
+20. Which of the following is correct way to create a list
+
+Which of the following is a valid way to create a list of integers from 0 to 99 using a list comprehension?
+
+
+a. [x if x % 2 == 0 for x in range(100)]
+
+
+b. [x for x in range(100)]
+
+
+c. [x**2 for x in range(100)]
+
+
+d. [x for x in range(1, 100)]
+
+Correct! b
+
+21. Which of the following is a valid way to check if a key is in a Python dictionary?
+
+Check the correct answers.
+
+
+a. 'key' in my_dict
+
+
+b. my_dict.get('key') is not None
+
+
+c. my_dict.contains_key('key')
+
+
+d. my_dict.has_key('key')
+
+Correct! a
+
+22. Which of the following is a valid way to remove a key-value pair from a Python dictionary?
+
+Check the correct answers.
+
+
+a. my_dict.delete('key')
+
+
+b. del my_dict['key']
+
+
+c. my_dict.remove('key')
+
+
+d. my_dict.pop('value')
+
+Correct! b
+
+23. Which of the following statements about list comprehensions in Python is true?
+
+Check the correct answers.
+
+
+a. List comprehensions can only be used to create new lists.
+
+
+b. List comprehensions can be nested to create more complex expressions.
+
+
+c. List comprehensions can only be used to iterate over one iterable.
+
+
+d. List comprehensions can only contain if clauses, but not else clauses.
+
+Correct! b
+
+24. What is the output of the following code?
+
+my_dict = {'apple': 2, 'banana': 3, 'orange': 4}
+my_dict.update({'apple': 4, 'pear': 1})
+print(my_dict)
+
+a. {'apple': 2, 'banana': 3, 'orange': 4}
+
+
+b. {'apple': [2, 4], 'banana': 3, 'orange': 4, 'pear': 1}
+
+
+c. {'apple': 4, 'banana': 3, 'orange': 4, 'pear': 1}
+
+
+d. {'apple': 2, 'banana': 3, 'orange': 4, 'pear': 1}
+
+Correct! c
