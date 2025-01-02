@@ -1,0 +1,63 @@
+1. What is the difference between supervised and unsupervised machine learning?. Which of the following statements are true?
+
+
+a. Supervised learning problems can be grouped into clustering and association.
+
+
+b. Supervised learning is used when we want to predict a certain outcome from a given input.
+
+
+c. The goal for unsupervised learning is to model the underlying structure or distribution in the data.
+
+
+d. There are two major types of supervised learning problems, called clustering and regression.
+
+Correct! b, c
+
+2. Select which of the following scenarios are regression problems.
+
+
+a. Predict the score that a student will achieve in an exam whose grade can be 0.1, 2,. . . , 10
+
+
+b. Given a tweet, determine whether or not it contains text against or on favor for a presidential candidate.
+
+
+c. Predict whether a user will churn from the service.
+
+
+d. Predict how much a company will spend on electricity the next semester.
+
+Correct! a, d
+
+3. Select which of the following scenarios are classification problems.
+
+
+a. Determine whether a customer is likely to purchase more items or not
+
+
+b. Impact of blood alcohol content on coordination
+
+
+c. An algorithm is trained to recognize spam email by learning the characteristics of what constitutes spam vs non-spam email.
+
+
+d. Predict the prices of a house in Boston based on zipcode, neighbourhood, the per capita crime rate by town, etc
+
+Correct! a, c
+
+4. Suppose you want to develop a supervised machine learning model to predict whether a superhero will fly or not. Which of the following statements are true?
+
+
+a. We'll use unlabeled examples to train the model.
+
+
+b. A classification model provide the best approach.
+
+
+c. This is not a machine learning problem
+
+
+d. A regression model is the best way to predict the probability to fly.
+
+Correct! b
