@@ -1,0 +1,42 @@
+1. What is the primary goal of machine learning?
+
+
+a . The primary goal of machine learning is to create machines that can perform only a single task.
+
+
+b . The primary goal of machine learning is to enable computers to learn from data and improve their performance on specific tasks over time.
+
+
+c. The primary goal of machine learning is to replace human decision-making entirely.
+
+Correct! b 
+
+2. What is the difference between supervised and unsupervised learning?
+
+
+a. Supervised learning and unsupervised learning are interchangeable terms with no distinct differences.
+
+
+b. Supervised learning involves training models on labeled data, where the correct answers are provided, and the model learns to map input data to output labels.
+
+
+c. Supervised learning only uses unlabeled data and does not require any correct answers during training.
+
+
+d. Unsupervised learning analyzes unlabeled data to discover patterns or relationships without explicit output labels.
+
+Correct! a , c
+
+3. Select two examples of applications for machine learning in real-world scenarios.
+
+
+a. Machine learning is applied in healthcare for disease prediction and diagnosis, using patient data to identify potential health issues.
+
+
+b. Machine learning is only used in theoretical research and does not have practical applications in real-world scenarios.
+
+
+c. Machine learning is exclusively used in robotics
+
+
+d. In marketing, machine learning is utilized for customer segmentation, allowing businesses to target specific groups with personalized advertisements.
