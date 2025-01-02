@@ -1,0 +1,59 @@
+1. True or False:Incorporating irrelevant features in a machine learning model can improve its predictive performance
+
+
+a. True
+
+
+b. False
+
+Correct! a
+2. True or False: Feature selection in machine learning helps in reducing the dimensionality of the dataset.
+
+
+a. True
+
+
+b. False
+
+Correct! a
+3. Scenario Question
+
+You are tasked with developing a spam email filter using machine learning. The dataset you have contains email samples labeled as "spam" or "not spam." Which features would you consider important for this classification task?
+
+A. Sender's Email Address 
+B. Word Frequency in the Email 
+C. Font Style and Size 
+D. Number of Links in the Email 
+E. Email Attachment Size
+
+Select the correct options:
+
+
+a. B, D, A
+
+
+b. A, C, E
+
+
+c. B, D, E
+
+
+d. A, D, E
+
+Correct! c
+4. Scenario Question
+
+You are working on a machine learning project to predict customer churn for a subscription-based service. The dataset you have includes customer information such as age, usage patterns, subscription type, and a unique customer ID for each record.
+
+Why would using the customer ID as a feature for predicting churn be ineffective?
+
+
+a. The customer ID is not related to the underlying reasons for churn and including it may introduce noise into the predictive model.
+
+
+b. Using the customer ID as a feature may raise privacy concerns and ethical considerations, as it directly identifies individuals.
+
+
+c. The customer ID is a unique identifier and does not contain predictive information regarding the likelihood of churn.
+
+Correct! c
