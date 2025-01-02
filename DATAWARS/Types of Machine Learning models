@@ -1,0 +1,32 @@
+1. What is the key distinction between supervised and unsupervised learning?
+
+
+a. Unsupervised learning uses labeled data, while supervised learning works with unlabeled data to find patterns
+
+
+b. Supervised learning uses labeled data, while unsupervised learning works with unlabeled data to find patterns
+
+Correct! b 
+
+2. Select the correct example of a real-world application for each type of machine learning.
+
+
+a. Supervised learning in email spam filtering, reinforcement learning in customer segmentation, and unsupervised learning in training self-driving cars.
+
+
+b. Supervised learning in email spam filtering, unsupervised learning in customer segmentation, and reinforcement learning in training self-driving cars.
+
+Correct! b
+
+3. Select the correct machine learning type for Supervised learning
+
+
+a. Involves agents interacting with an environment to maximize rewards through learned actions.
+
+
+b. Uses labeled data to make predictions based on previously known outcomes.
+
+
+c. Trains models on unlabeled data to discover hidden patterns and groupings.
+
+Correct! b
