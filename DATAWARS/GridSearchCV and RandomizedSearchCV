@@ -1,0 +1,53 @@
+ # Spliting target variable and independent variables
+#using pd.get_dummies for one hot encoding the categorical data
+X = pd.get_dummies(df.drop(['type','id'], axis = 1))
+y = df['type']
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import cross_val_score
+import numpy as np
+
+# Define the range of values to test for max_depth
+max_depth_range = range(1, 21)
+
+# Create an empty list to store the mean accuracy scores for each value of max_depth
+accuracy_scores = []
+
+# Loop over the max_depth values
+for depth in max_depth_range:
+
+    # Create a Random Forest classifier with the current value of max_depth
+    dt = DecisionTreeClassifier(max_depth=depth, random_state=42)
+    # Compute the cross-validation scores for the Random Forest classifier
+    scores = cross_val_score(dt, X_train, y_train, cv=5)
+    # Compute the mean accuracy score across all folds
+    mean_score = np.mean(scores)
+    # Append the mean score to the list of accuracy scores
+    accuracy_scores.append(mean_score)
+
+# Find the value of max_depth that gives the highest mean accuracy score
+best_depth = max_depth_range[np.argmax(accuracy_scores)]
+best_score = accuracy_scores[np.argmax(accuracy_scores)]
+
+print(f"Best max_depth: {best_depth}")
+print(f"Highest accuracy score: {best_score}")
+
+  -----------------Grid search and randomized grid search optimizations-------------------
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import GridSearchCV
+import numpy as np
+
+# Create a DecisionTreeClassifier
+dt = DecisionTreeClassifier(random_state=42)
+
+# Define the parameter grid to search over
+param_grid = {'max_depth': range(1, 21)}
+
+# Create a GridSearchCV object with 5-fold cross-validation
+grid_search = GridSearchCV(dt, param_grid, cv=5)
+
+# Fit the GridSearchCV object to the data
+grid_search.fit(X_train, y_train)
