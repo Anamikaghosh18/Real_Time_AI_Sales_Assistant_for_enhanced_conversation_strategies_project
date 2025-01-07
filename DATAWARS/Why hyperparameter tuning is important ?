@@ -1,0 +1,74 @@
+1. In the hyperparameter tuning lab, which evaluation metric is used to measure the performance of the logistic regression model?
+a. Accuracy
+b. Precision
+c. Recall
+d. F1-score
+
+Correct! a
+2. What is the purpose of hyperparameter tuning in machine learning?
+a. To select the best features for the model.
+b. To find the best combination of hyperparameters for the model.
+c. To adjust the model's internal parameters during training.
+
+Correct! b
+3. What does the plot in final step of the lab indicate?
+a. The testing accuracy of the logistic regression model.
+b. The impact of hyperparameter tuning on the model's computational resources.
+c. The training accuracy of the logistic regression model.
+d. The relationship between regularization strength and feature importance.
+
+Correct! b
+
+======================================================================================================
+
+Hyperparameter tuning
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Generate synthetic data for the binary classification example
+np.random.seed(42)
+X, y = make_classification(n_samples=1000, n_features=20, random_state=42)
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create an instance of the logistic regression model with default hyperparameters
+logistic_model_default = LogisticRegression()
+
+# Train the model with the training data
+logistic_model_default.fit(X_train, y_train)
+
+# Make predictions on the test set using the default model
+y_pred_default = logistic_model_default.predict(X_test)
+
+# Calculate the accuracy of the default model
+accuracy_default = accuracy_score(y_test, y_pred_default)
+print(f"Accuracy with default hyperparameters: {accuracy_default:.2f}")
+
+# Hyperparameter tuning: Regularization strength (C)
+C_values = [0.01, 0.1, 1, 10]
+
+# Lists to store accuracy scores for different C values
+accuracy_scores = []
+
+# Loop through each C value, create and train the model, and evaluate its performance
+for C in C_values:
+    logistic_model_tuned = LogisticRegression(C=C)
+    logistic_model_tuned.fit(X_train, y_train)
+    y_pred_tuned = logistic_model_tuned.predict(X_test)
+    accuracy_tuned = accuracy_score(y_test, y_pred_tuned)
+    accuracy_scores.append(accuracy_tuned)
+
+# Plot the accuracy scores for different C values
+plt.figure(figsize=(8, 6))
+plt.plot(C_values, accuracy_scores, marker='o')
+plt.xlabel('Regularization Strength (C)')
+plt.ylabel('Accuracy')
+plt.title('Model Performance vs. Regularization Strength')
+plt.grid(True)
+plt.show()
