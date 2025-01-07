@@ -1,0 +1,16 @@
+1. Which of the following scenarios represents a suitable regression target variable?
+
+
+a. Classifying whether an email is spam or not.
+b. Identifying whether a patient has a certain medical condition.
+c. Predicting the type of flower species based on petal length and width.
+d. Estimating the time it takes to complete a marathon race.
+
+Correct! d
+2. In which of the following situations is regression the most appropriate technique?
+a. Forecasting the price of a house based on its features.
+b. Predicting whether a customer will buy a product.
+c. Categorizing images of animals into different species.
+d. Determining the sentiment (positive/negative) of a movie review.
+
+Correct! a
