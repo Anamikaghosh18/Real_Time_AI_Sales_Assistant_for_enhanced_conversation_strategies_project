@@ -1,0 +1,40 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from sklearn.model_selection import validation_curve
+from sklearn.svm import SVC
+
+iris_df=pd.read_csv('iris_dataset.csv')
+iris_df.head()
+
+
+X=iris_df.drop(columns='target')
+y=iris_df.target
+
+
+# Varying values of C
+param_range = np.logspace(-3, 3, 10)
+
+# Calculate validation scores for varying C values
+train_scores, test_scores = validation_curve(
+    SVC(), X, y, param_name="C", param_range=param_range, cv=5, scoring="accuracy"
+)
+
+# Calculate mean and standard deviation of scores
+train_mean = np.mean(train_scores, axis=1)
+train_std = np.std(train_scores, axis=1)
+test_mean = np.mean(test_scores, axis=1)
+test_std = np.std(test_scores, axis=1)
+
+# Plot validation curve
+plt.figure(figsize=(10, 6))
+plt.title("Validation Curve with SVM")
+plt.xlabel("C")
+plt.ylabel("Score")
+plt.semilogx(param_range, train_mean, label="Training score", color="blue")
+plt.fill_between(param_range, train_mean - train_std, train_mean + train_std, alpha=0.2, color="blue")
+plt.semilogx(param_range, test_mean, label="Cross-validation score", color="orange")
+plt.fill_between(param_range, test_mean - test_std, test_mean + test_std, alpha=0.2, color="orange")
+plt.legend(loc="best")
+plt.show()
