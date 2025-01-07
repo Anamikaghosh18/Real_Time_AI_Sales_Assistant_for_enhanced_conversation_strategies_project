@@ -1,0 +1,47 @@
+1. True or False: Feature selection is the process of randomly choosing any subset of features from the dataset.
+a. False
+b. True
+
+Correct! a
+2. True or False: Dimensionality reduction is a technique used in feature engineering to increase the number of features in the dataset.
+a. False
+b. True
+
+Correct! a
+3.True or False: Feature engineering involves creating new features by combining or transforming existing ones to enhance the model's performance.
+a. False
+b. True
+
+Correct! b
+4. True or False: Features that exhibit high discriminative power are typically highly correlated with each other.
+a. True
+b. False
+
+Correct! b
+
+
+
+
+============================================================================================================================
+
+# Import necessary libraries
+from sklearn.datasets import make_classification
+from sklearn.feature_selection import VarianceThreshold
+
+# Generate a simulated classification dataset
+X, y = make_classification(n_samples=1000, n_features=10, random_state=42)
+
+# Create a VarianceThreshold object
+var_threshold = VarianceThreshold(threshold=0)
+
+# Fit the VarianceThreshold object to the data
+var_threshold.fit(X)
+
+# Get the mask of selected features
+selected_features = var_threshold.get_support()
+
+# Get the selected feature indices
+selected_feature_indices = [i for i in range(len(selected_features)) if selected_features[i]]
+
+# Print the selected feature indices
+print("Selected Feature Indices:", selected_feature_indices)
