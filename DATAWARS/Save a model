@@ -1,0 +1,32 @@
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from joblib import dump, load 
+
+X=df[['Temperature','Advertisement']]
+y= df['Sales']
+
+from sklearn.model_selection import train_test_split
+random_state=0
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size = 0.2, random_state=0)
+
+from sklearn.linear_model import LinearRegression
+
+lr = LinearRegression()
+
+lr.fit(X_train,y_train)
+print(lr.coef_)
+print(lr.intercept_)
+
+y_pred= lr.predict(X_test)
+
+plt.scatter(y_pred, y_test, color='blue', label='1:1 relation')
+plt.ylabel('oberved')
+plt.xlabel('predicted')
+plt.title('Regression analysis')
+plt.legend()
+plt.show()
