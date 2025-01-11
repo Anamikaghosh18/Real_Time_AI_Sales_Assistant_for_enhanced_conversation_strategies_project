@@ -1,0 +1,27 @@
+1. What does a time series plot typically represent in data analysis?
+a. The comparison between different categorical groups over a period of time.
+b. The distribution of a single variable at a specific point in time.
+c. The change in a single variable over a period of time.
+d. The correlation between two variables at different points in time.
+
+correct ! c
+--------------------------------------------------------------------------------------------------------------------------
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample time points (months)
+time_points = np.arange(1, 13)
+
+# Sample variable values (e.g., monthly sales)
+variable_values = np.array([45, 50, 55, 40, 65, 60, 75, 70, 85, 80, 95, 100])
+
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(time_points, variable_values, marker='o', color='blue', linestyle='-')
+ax.set_title('Evolution of Variable Over Time')
+ax.set_xlabel('Time Points')
+ax.set_ylabel('Variable Value')
+ax.grid(True)
+plt.show()
+
