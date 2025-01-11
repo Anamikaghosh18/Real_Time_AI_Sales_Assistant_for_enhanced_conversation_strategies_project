@@ -1,0 +1,57 @@
+1. Analyzing salary vs sales
+import numpy as np
+import pandas as pd 
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+sales_df = pd.read_csv('business-sales.csv')
+sales_df.head()
+
+fig, ax = plt.subplots(figsize=(10, 6))
+# Edit the code below to create your scatter plot
+ax.scatter(sales_df['salary'],sales_df['sales'], marker='o')
+ax.set_title('Salary vs. Sales')
+ax.set_xlabel('Salary')
+ax.set_ylabel('Sales')
+
+2. Use different sizes to represent working experiences
+fig, ax = plt.subplots(figsize=(10, 6))
+# Edit the code below to create your scatter plot
+my_plot = ax.scatter(sales_df['salary'], sales_df['sales'],
+                     s=sales_df['work experience'],
+                     alpha=0.3)
+
+ax.set_title('Salary vs. Sales')
+ax.set_xlabel('Salary')
+ax.set_ylabel('Sales')
+
+legend = ax.legend(*my_plot.legend_elements("sizes", num=10),
+                   title="Work experience years")
+ax.add_artist(legend)
+\
+3. Use colors to show different training levels
+
+# Figure and axis
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Define unique training levels and corresponding colors
+unique_levels = sales_df['training level'].unique()  # Get unique levels from the DataFrame
+colors = ['red', 'blue', 'green', 'orange', 'purple']  # Add more colors if needed
+color_map = dict(zip(unique_levels, colors))
+
+# Plot each training level with a different color
+for level in unique_levels:  # Iterate over each unique training level
+    # Select data for the current training level
+    subset = sales_df[sales_df['training level'] == level]
+    
+    # Scatter plot with specified color and label
+    ax.scatter(subset['salary'], subset['sales'], 
+               color=color_map[level], label=f'Training Level {level}')
+
+# Set plot title and axis labels
+ax.set_title('Salary vs. Sales')
+ax.set_xlabel('Salary')
+ax.set_ylabel('Sales')
+
+# Display legend
+ax.legend()
