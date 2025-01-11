@@ -1,0 +1,36 @@
+1. What is the fundamental principle when creating visualizations?
+a. Prioritizing aesthetics over accuracy
+b. Enhancing data through manipulation
+c. Maximizing complexity for impact
+d. Maintaining integrity and accuracy
+
+Correct! d
+2. Why is it important to avoid cheating or manipulation in visualizations?
+a. To make the data more visually appealing
+b. To confuse the audience for added engagement
+c. To maintain trust and convey accurate information
+d. To create a sense of mystery and intrigue
+
+Correct! c
+
+=============================================================================================================================
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+import matplotlib.pyplot as plt
+
+# Sample data
+months = range(1, 13)  # Representing 12 months
+sales = [45, 50, 55, 40, 65, 60, 75, 70, 85, 80, 95, 100]
+
+# Creating a line graph with misleading y-axis scale
+plt.plot(months, [x * 100 for x in sales], marker='o', color='red')  # Exaggerated y-axis scale
+
+# Adding misleading titles and labels
+plt.title('Skyrocketing Monthly Sales Trend')  # Misleading title
+plt.xlabel('Time (in centuries)')  # Misleading x-axis label
+plt.ylabel('Sales (in billions)')  # Misleading y-axis label
+
+# Display the misleading plot
+plt.show()
