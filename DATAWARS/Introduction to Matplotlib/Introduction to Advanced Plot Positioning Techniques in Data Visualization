@@ -1,0 +1,21 @@
+1. What does the plt.subplots() function return in Matplotlib?
+a. A single figure and a single axes object
+b. An error message unless specific parameters are provided
+c. A list of figure objects
+d. A tuple containing a figure and axes object(s)
+
+Correct! d
+2. What is the correct way to create a 2x2 grid of subplots in Matplotlib?
+a. plt.subplots(nrows=2, ncols=2)
+b. plt.subplots(2 x 2)
+c. plt.GridSpec(2, 2)
+d. plt.subplots(2, 2)
+
+Correct! a
+3. In Matplotlib, which function is used to automatically adjust the layout of subplots to prevent overlapping and ensure clear presentation?
+a. plt.adjust_layout()
+b. plt.layout_optimizer
+c. plt.tight_layout()
+d. plt.layout_optimizer()
+
+Correct! c
