@@ -1,0 +1,52 @@
+Activity 1. Create an Ugly Plot
+# Create an ugly plot here
+fig, ax = plt.subplots(figsize=(6, 4))
+ax.plot(x,y, color = 'blue', marker='o',markersize = 12)
+ax.set_title("Ugly Plot")
+
+fig.show()
+
+Activity 2. Create a Bad Plot
+fig, ax = plt.subplots(figsize=(6, 4))
+
+# Write your code here to plot a bad 
+ax.plot(x, y,color = 'black')
+ax.set_title("Bad Plot")
+fig.show()
+
+Activity 3. Create a Wrong Plot
+
+fig, ax = plt.subplots(figsize=(6, 4))
+
+ax.plot(x, y, color='red')
+ax.set_title("Wrong Plot")
+plt.show()
+
+
+
+
+==========================================================================================================================
+4. Which of the following characteristics typically makes a data plot 'ugly'?
+a. Use of accurate and relevant data
+b. Simplified representation of complex data
+c. Clear and distinct labeling of axes
+d. Clashing color schemes and cluttered presentation
+
+Correct! d
+
+5. What is a key factor in identifying a 'wrong' plot in data visualization?
+a. The plot uses a variety of colors.
+b. The plot lacks aesthetic appeal.
+c,. Data is represented in a mathematically inaccurate or misleading way.
+d. The data is complex and difficult to understand.
+
+Correct! c
+
+6. Consider two plots shown to you, Plot A and Plot B, both attempting to represent the same dataset. Which one of these plots would you classify as 'wrong' based on our discussions, and why?
+
+a. Plot A, because it uses a very bright and clashing color scheme.
+b. Plot B, because it uses a simple line chart with altered y values instead of accurately representing the sine wave.
+c. Plot B, because it represents the data with a misleading scale on the axes, altering the true nature of the sine wave.
+d. Plot A, because it contains too many data points, making it look cluttered.
+
+Correct! c
