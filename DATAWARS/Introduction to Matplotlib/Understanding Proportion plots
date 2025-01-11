@@ -1,0 +1,46 @@
+1. What does a pie chart typically represent?
+a. Proportions of different categories within a whole.
+b. Time series data.
+c. Distribution of a categorical dataset.
+d. Correlation between two variables.
+
+Correct! a
+2. In a bar plot, what does the height of each bar usually represent?
+a. The variance of the category.
+b. The frequency or value of the category.
+c. The proportion of the category compared to the whole.
+d. The mean value of the category.
+
+Correct! b
+3. You are given a pie chart showing market share of five companies and a bar graph depicting their annual profits. How would you use these charts in conjunction to draw insights about the companies' performance?
+a. The pie chart can be used to understand the relative market dominance of each company,
+while the bar graph can provide insights into their absolute profit figures. 
+Comparing these charts could reveal, for instance, whether a company with a large market share 
+is also proportionately profitable.
+
+b. By examining the pie chart, we can determine the annual profits of each company based on their market share,
+as the market share directly indicates profitability. Similarly, from the bar graph of annual profits, 
+we can precisely calculate the market share percentages of each company. Thus, 
+these charts allow us to interchangeably use market share to determine profits and vice versa.
+
+Correct! a
+
+====================================================================================================================
+
+Activity: Create a bar plot for given data¶
+
+# Data
+categories = ['A', 'B', 'C', 'D']
+values = [23, 45, 12, 35]
+# Create the figure and axis objects
+fig, ax = plt.subplots(figsize=(10, 6))
+colors = ['red', 'green', 'blue', 'orange']
+# Creating the bar graph
+ax.bar(categories,values,color = colors)
+# Your code here
+ax.set_xlabel('Categories')
+ax.set_ylabel('Values')
+ax.set_title('Bar Plot for Categories')
+
+# Display the chart
+plt.show()
