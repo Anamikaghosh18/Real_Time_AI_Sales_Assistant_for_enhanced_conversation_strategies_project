@@ -1,0 +1,52 @@
+1. Scatter Plots with Non-Numerical Data
+data = {
+    'Category': ['A', 'B', 'C', 'D'],
+    'Value': [10, 20, 30, 40]
+}
+df = pd.DataFrame(data)
+
+fig, ax = plt.subplots()
+
+# Your code here
+ax.scatter(df['Category'],df['Value'])
+ax.set_xlabel('Category')
+ax.set_ylabel('Value')
+ax.set_title('Scatter Plot with Categorical Data')
+
+# Display the plot
+plt.show()
+
+
+3. Line Plots for Unordered Categories
+# Sample unordered categorical data
+data = {
+    'Category': ['Type A', 'Type C', 'Type B', 'Type D'],
+    'Value': [15, 35, 25, 45]
+}
+df = pd.DataFrame(data).sort_values('Category')
+fig, ax = plt.subplots()
+# Your code here (create a plot)
+ax.plot(df['Category'],df['Value'])
+ax.set_xlabel('Category')
+ax.set_ylabel('Value')
+ax.set_title('Line Plot with Unordered Categorical Data')
+
+# Display the plot
+plt.show()
+
+
+4. Which of the following statements best reflects the suitability of using a scatter plot for time series data?
+
+You have been given a dummy data containing time series data, which includes dates and corresponding temperature readings over several months. Create a scatter plot to visualize this data. After examining the plot, consider the effectiveness of a scatter plot in this context.
+
+# Sample time series data
+dates = pd.date_range(start='2021-01-01', periods=5, freq='D')
+data = {'Date': dates, 'Value': [10, 15, 14, 17, 16]}
+df = pd.DataFrame(data)
+
+a. Scatter plots fail to convey the continuity and sequence inherent in time series data, making them less ideal compared to line plots.
+b. Scatter plots are suitable for time series data only if the data points are not in a sequential order..
+c. Scatter plots are ideal for time series data as they accurately represent the sequence and continuity inherent in the data.
+d. The suitability of scatter plots for time series data depends entirely on the range of data and has nothing to do with the data type.
+
+Correct! a
