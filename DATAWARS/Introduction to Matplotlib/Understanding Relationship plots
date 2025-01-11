@@ -1,0 +1,37 @@
+1. Understanding Scatter Plots
+
+Which of the following best describes a scenario where a scatter plot is the most appropriate type of visualization?
+a. When you are comparing the mean values of different categories.
+b. When you want to examine the relationship between two different quantitative variables.
+c. When you want to show the trend of a variable over a continuous time period.
+d. When you are displaying the frequency distribution of a single variable.
+
+Correct! b
+2. Understanding Line Plots
+
+In which of the following scenarios would a line plot be the most suitable choice for data visualization?
+a. To visualize the distribution of exam scores in a class.
+b. To show the relationship between height and weight in a group of individuals.
+c. To compare the total sales of different product categories in a quarter.
+d. To display the change in temperature over a year, with data points for each month.
+
+Correct! d
+
+
+Activity 3: Visualizing Yearly Passenger Numbers
+# Load the dataset
+flights = pd.read_csv('flights.csv')
+
+# Aggregate data by year
+yearly_passengers = flights.groupby('year')['passengers'].sum().reset_index()
+
+# Create the line plot
+fig, ax = plt.subplots()
+ax.plot(yearly_passengers['year'], yearly_passengers['passengers'])
+ax.set_title('Yearly Passenger Numbers')
+ax.set_xlabel('Year')
+ax.set_ylabel('Number of Passengers')
+
+# Show the plot
+plt.show()
+
