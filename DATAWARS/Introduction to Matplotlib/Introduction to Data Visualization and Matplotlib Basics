@@ -1,0 +1,22 @@
+1. What is the main advantage of using plt.show() when displaying Matplotlib plots?
+a. It allows for interactivity and real-time updates.
+b. It avoids the need for additional customization.
+c. It is ideal for batch processing scripts.
+d. It generates static image files for reports.
+
+Correct! a
+2. When might you choose No show() and use plt.savefig() to display Matplotlib plots?
+
+a. When you need to generate static images for reports or presentations.
+b. When you want to explore data and make real-time adjustments.
+c. When working in an interactive environment like Jupyter Notebook.
+d. When you want to avoid creating any plots.
+
+Correct! a
+3. What is the primary advantage of using data visualization in the context of data analysis?
+a. It provides a visual representation of data to uncover patterns and insights.
+b. It makes data analysis more complex and time-consuming.
+c. It replaces the need for written reports and explanations.
+d. It allows for the exploration of datasets and the identification of patterns.
+
+Correct! a
