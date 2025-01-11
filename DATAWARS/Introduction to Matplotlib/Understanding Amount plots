@@ -1,0 +1,41 @@
+1. Draw four horizontal bars with different lengths, labels, and colors using Matplotlib.
+
+Use the following dataset and colors list:
+
+bar_lengths = [3, 4, 5, 6]  # Adjust the lengths as needed
+bar_labels = ['Bar 1', 'Bar 2', 'Bar 3', 'Bar 4']
+bar_colors = ['skyblue', 'salmon', 'lightgreen', 'lightcoral']
+
+# Create a horizontal bar plot
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Create the horizontal bars
+ax.barh( bar_labels ,bar_lengths,color= bar_colors)
+
+# Add labels and title
+ax.set_xlabel("Length")
+ax.set_ylabel("Bars")
+ax.set_title("Horizontal Bar Plot")
+
+========================================================================================================================
+
+2. What type of data visualization is a bar plot commonly used for?
+a. Comparing the distribution of categorical data.
+b. Showing the correlation between two numerical variables.
+c. Representing trends over time.
+d. Visualizing relationships between two continuous variables.
+
+Correct! a
+3. In a horizontal bar plot, what axis is typically used to label the categories or groups being compared?
+a. Y-axis
+b. X-axis
+c. Z-axis
+
+Correct! b
+4. What is the purpose of including labels and a title in a bar plot?
+a. To add unnecessary elements to the plot.
+b. To make the plot look more colorful and visually appealing.
+c. To reduce the size of the plot.
+d. To enhance readability and provide context for the data.
+
+Correct! d
