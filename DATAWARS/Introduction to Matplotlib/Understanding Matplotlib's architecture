@@ -1,0 +1,14 @@
+##### 1: Creating a Figure and Axis in Matplotlib. Store the output in fig and ax variables.
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+# Create a Figure and Axes object
+fig, ax = plt.subplots()
+
+# Plot data on the Axes
+ax.plot([2, 4, 6, 8], [15, 30, 45, 60])
+
+
+
+# Display the plot
+plt.show()
