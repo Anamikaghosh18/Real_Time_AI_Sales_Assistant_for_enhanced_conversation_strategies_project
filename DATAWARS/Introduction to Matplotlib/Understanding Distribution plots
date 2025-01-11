@@ -1,0 +1,33 @@
+1. What is the primary purpose of a histogram in data visualization?
+a. To show the distribution of a single numerical variable.
+b. To display relationships between two variables.
+c. To represent categorical data.
+d. To compare two datasets.
+
+Correct! a
+2. In a histogram, what does the height of each bar represent?
+a. The mean (average) of the dataset.
+b. The frequency or count of data points in a specific range or bin.
+c. The total number of data points in the dataset.
+d. The sum of all values in the dataset.
+
+Correct! b 
+3. When should you adjust the bin size in a histogram?
+a. When you want to change the color of the bars.
+b. When you want to control the level of detail and granularity in the visualization.
+c. Bin size is always fixed and cannot be adjusted.
+d. When you want to change the height of the bars.
+
+Correct! b
+
+=======================================================================================================
+   ------------------------- visulaisation ------------------------------------------------------
+df = pd.read_csv('flights.csv') # Your code here
+df.head()
+# Plot the histogram
+fig, ax = plt.subplots(figsize=(12, 6))
+ax.hist(df['passengers'])
+ax.set_title('Distribution of Flight Passengers')
+ax.set_xlabel('Number of Passengers')
+ax.set_ylabel('Frequency')
+plt.show()
