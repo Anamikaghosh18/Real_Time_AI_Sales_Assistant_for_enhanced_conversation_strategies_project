@@ -1,0 +1,74 @@
+import numpy as np
+import pandas as pd 
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+students_df = pd.read_csv('students-performance.csv')
+students_df.head()
+
+students_df.info()
+students_df.describe()
+
+1. Plot a histogram using the writing scores data.
+fig1, ax1 = plt.subplots(figsize=(10, 6))
+ax1.hist(students_df['writing score'], bins = 30, alpha = 0.6, color = 'green', density = 'true') # Write your code here.
+
+ax1.set_xlabel('Score')
+ax1.set_ylabel('Frequency')
+ax1.set_title('Writing Score')
+
+2. Activity 2: Creating a Horizontal Box Plot with Matplotlib
+fig2, ax2 = plt.subplots(figsize=(10, 6))
+ax2.boxplot(students_df['reading score'], vert=False)
+ax2.set_ylabel('Reading Scores')
+ax2.set_title('Distribution of Reading Scores')
+
+Activity 3: Compare the Distribution of Reading and Writing Scores 
+reading_scores = students_df['reading score']
+writing_scores = students_df['writing score']
+scores_data = [reading_scores, writing_scores]
+
+fig3, ax3 = plt.subplots(figsize=(10, 6))
+ax3.boxplot(scores_data, labels=['Reading Score', 'Writing Score'])
+ax3.set_ylabel('Score')
+ax3.set_title('Comparison of Reading and Writing Scores')
+
+Activity 4: Comparing Reading Scores by Test Preparation
+# Separate Reading Scores by Test Preparation Course
+completed_prep = students_df[students_df['test preparation course'] == 'completed']['reading score']
+no_prep = students_df[students_df['test preparation course'] == 'none']['reading score']
+# Store the data to plot
+reading_scores = [completed_prep, no_prep]
+# Create the boxplot
+fig4, ax4 = plt.subplots(figsize=(10, 6))
+ax4.boxplot(reading_scores, labels=['Completed Prep', 'No Prep'])
+# Add labels and title
+ax4.set_ylabel('Reading Score')
+ax4.set_title('Reading Scores by Test Preparation Course')
+# Show the plot
+plt.show()
+
+Activity 5: Comparing Math, Reading, and Writing Scores in a Single Graph
+math_scores = students_df['math score']
+reading_scores = students_df['reading score']
+writing_scores = students_df['writing score']
+
+scores_data = [math_scores, reading_scores, writing_scores]
+
+fig5, ax5 = plt.subplots(figsize=(10, 6))
+ax5.boxplot(scores_data, labels=['Math Score', 'Reading Score', 'Writing Score'])
+ax5.set_ylabel('Score')
+ax5.set_title('Comparison of Math, Reading, and Writing Scores')
+
+
+Activity 6: Analyzing Reading Score Variation by Race/Ethnicity
+
+groups = students_df['race/ethnicity'].unique()  # Unique categories of race/ethnicity
+data_to_plot = [students_df[students_df['race/ethnicity'] == group]['reading score'] for group in groups]
+
+
+fig6, ax6 = plt.subplots(figsize=(10, 6))
+ax6.boxplot(data_to_plot, labels=groups)
+ax6.set_ylabel('Reading Score')
+ax6.set_title('Reading Scores by Race/Ethnicity')
