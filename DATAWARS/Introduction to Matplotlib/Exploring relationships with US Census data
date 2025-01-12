@@ -1,0 +1,33 @@
+1) Plotting and Comparing Socio-Economic Indicators with Matplotlib
+# Creating a figure and an axis
+fig, ax = plt.subplots(figsize=(14, 7))
+
+# Plotting the data using scatter plots
+ax.plot(df['State'],df['normalized_hs_rate'], label='High School Graduation Rates', marker='o', color='b')
+ax.plot(df['State'],df['normalized_poverty_rate'], label='Poverty Rates', marker='x', color='r')
+
+# Adding labels and title
+ax.set_xlabel('States', fontsize=10, color='blue')
+ax.set_ylabel('Normalized Rates')
+ax.set_title('Comparison of High School Graduation and Poverty Rates by State')
+
+# Rotating x-axis labels by 90 degrees
+ax.set_xticklabels(df['State'], fontsize=8,rotation=90)
+# Adding a legend
+ax.legend()
+
+# Display the plot
+plt.show()
+
+2) Scatter Plotting Socio-Economic Indicators
+# Plotting the scatter plot
+fig, ax = plt.subplots(figsize=(14, 7))
+ax.scatter(df['normalized_hs_rate'], df['normalized_poverty_rate'])
+
+# Adding labels and title
+ax.set_xlabel('Normalized High School Graduation Rate')
+ax.set_ylabel('Normalized Poverty Rate')
+ax.set_title('Statewise Comparison of High School Graduation and Poverty Rates')
+
+# Display the plot
+plt.show()
