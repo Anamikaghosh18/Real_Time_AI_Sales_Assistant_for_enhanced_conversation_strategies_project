@@ -1,0 +1,50 @@
+Activity 1: Bayes' theorem
+# Given probabilities
+p_red = 0.25
+p_blue = 1 - p_red  # Complement of P(Red)
+
+p_round_given_red = 0.6
+p_round_given_blue = 8 / 15
+
+# Calculate P(Round)
+p_round = (p_round_given_red * p_red) + (p_round_given_blue * p_blue)
+
+# Calculate P(Red | Round) using Bayes' Theorem
+p_red_given_round = (p_round_given_red * p_red) / p_round
+
+# Print the result
+print(f"P(Red | Round): {p_red_given_round:.4f}")
+
+-----------------------------------------------------------------------------------
+Naive Bayes Classifier¶
+
+# Importing the libraries
+import pandas as pd
+from sklearn.naive_bayes import BernoulliNB
+from sklearn.model_selection import train_test_split
+
+# Reading the data
+data = pd.read_csv('spambase.data', header=None)
+data.rename(columns)
+
+data.head()
+# Feature Scaling  
+from sklearn.preprocessing import StandardScaler  
+sc = StandardScaler()  
+emails_train = sc.fit_transform(emails_train)  
+email_test = sc.transform(emails_test)  
+
+# Create a Bernoulli Naïve Bayes classifier
+nb = BernoulliNB()
+
+# Train the classifier using the training data
+nb.fit(emails_train,  target_train)
+# Make predictions on the testing data
+y_pred = nb.predict(emails_test)
+from sklearn.metrics import accuracy_score
+
+# Calculate the accuracy of the classifier
+accuracy = accuracy_score(target_test, y_pred)
+
+print(f"Accuracy: {accuracy:}")
+
