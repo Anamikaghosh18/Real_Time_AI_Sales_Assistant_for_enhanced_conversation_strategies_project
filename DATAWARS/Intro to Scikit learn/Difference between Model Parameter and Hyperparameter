@@ -1,0 +1,39 @@
+1. What are model parameters?
+
+
+a. Random state
+
+
+b. Tuning parameters for improving model performance.
+
+
+c. Variables learned from the training data that define the model.
+
+
+d. Settings that control the learning algorithm.
+
+Correct! c
+2. Which of the following statements is true?
+
+
+a. Model parameters are not set manually by the user.
+
+
+b. Model parameters and hyperparameters are the same thing.
+
+
+c. Hyperparameters are learned from the training data.
+
+Correct! a
+3. How are model parameters and hyperparameters different?
+
+
+a. Model parameters are set manually, while hyperparameters are learned.
+
+
+b. Model parameters affect model performance, while hyperparameters affect model interpretation.
+
+
+c. Model parameters define the structure and behavior of the model, while hyperparameters control the learning process.
+
+Correct! c
