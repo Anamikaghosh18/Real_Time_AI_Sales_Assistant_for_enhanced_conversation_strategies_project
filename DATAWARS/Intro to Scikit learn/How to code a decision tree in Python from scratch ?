@@ -1,0 +1,31 @@
+1. Select the Gini index for the entire dataset
+
+
+a. 0.653
+b. 0.232
+c. 0.375
+d. 0.641
+
+Correct! a
+2. Suppose we want to split the dataset based on color. Compute the Gini index for each subset of the dataset that results from this split.
+
+a. Gini index red fruit = 0
+b. Gini index blue fruit = 0.375
+c. Gini index blue fruit = 1
+d. Gini index red fruit = 0.375
+
+Correct! b
+3. Which split, based on color or taste, results in a lower Gini index?
+a. Color
+b. Taste
+
+Correct! b
+
+4. What is the Gini index of the initial split of the decision tree
+a. 0
+b. 0.023
+c. 0.025
+d. 0.5
+ correct ! d
+
+
