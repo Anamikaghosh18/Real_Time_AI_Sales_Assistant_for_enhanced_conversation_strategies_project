@@ -1,0 +1,50 @@
+1. What is the role of feature variables in a classification problem?
+
+a. To provide additional context to the target variable
+b. To classify the target variable into different categories
+c. To determine the accuracy of the model
+d. To assess the performance of the model
+
+Correct! b
+
+2. Which of the following best defines the target variable in a classification problem?
+
+a. The variable used for making predictions
+b. The variable being predicted
+c. The variable used for feature engineering
+d. The variable used for normalization
+
+Correct! b
+
+3. In a binary classification problem to predict whether a customer will churn or not, what would be the target variable?
+
+a. Customer ID
+b. Customer income
+c. Likelihood of churn
+d. Customer age
+
+Correct! c
+
+4. Identify the target variable for this problem
+a. TenYearCHD
+b. BMI
+c. diabetes
+d. currentSmoker
+
+Correct! a
+
+6. Based on previous tasks identify if this problem is a binary of multiclass classification problem
+
+a. Binary
+b. Multiclas
+
+Correct! a
+
+7. You are given a dataset containing information about customers of an e-commerce website. The goal is to predict whether a customer will make a purchase or not based on their characteristics. Identify the target variable and the features variables in this scenario.
+
+a. Target variable: Purchase amount; Features variables: Customer age, Time spent on the website, Number of products viewed.
+b. Target variable: Customer age; Features variables: Purchase amount, Time spent on the website, Number of products viewed.
+c. Target variable: Purchase id; Features variables: Customer age, Time spent on the website, Number of products viewed.
+d. Target variable: Customer will make a purchase; Features variables: Customer age, Purchase amount, Time spent on the website, Number of products viewed.
+
+Correct! d
