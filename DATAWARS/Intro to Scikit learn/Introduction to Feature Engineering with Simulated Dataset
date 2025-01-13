@@ -1,0 +1,34 @@
+import pandas as pd
+import numpy as np
+
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Generate random categorical variables
+categories = ['Category1', 'Category2', 'Category3']
+categorical_data = np.random.choice(categories, size=100, replace=True)
+
+# Generate random numerical variables
+numerical_data = np.random.normal(loc=0, scale=1, size=100)
+
+# Generate random missing values
+missing_mask = np.random.choice([True, False], size=100, p=[0.2, 0.8])
+numerical_data[missing_mask] = np.nan
+
+# Create a DataFrame
+data = pd.DataFrame({
+    'Category': categorical_data,
+    'Numeric': numerical_data
+})
+
+# Print the DataFrame
+print(data.head())
+
+df_encoded= pd.get_dummies(data)
+
+df_filled= df_encoded.fillna(df_encoded.mean())
+
+df_filled['Feature1_squared'] = df_filled["Numeric"] ** 2
+df_filled['Feature2_cubed'] = df_filled["Numeric"] ** 3
+df_filled['Feature3_log'] = np.log(df_filled["Numeric"])
