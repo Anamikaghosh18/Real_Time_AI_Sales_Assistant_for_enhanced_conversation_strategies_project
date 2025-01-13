@@ -1,0 +1,33 @@
+import numpy as np
+from sklearn.datasets import make_regression
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+X, y = make_regression(n_samples=100, n_features=1, noise=10)
+plt.scatter(X, y)
+plt.xlabel('X')
+plt.ylabel('y')
+plt.title('Simulated Dataset')
+plt.show()
+
+from sklearn.model_selection import train_test_split
+random_state=0
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size =0.2, random_state=0)
+
+from sklearn.linear_model import LinearRegression
+
+lr= LinearRegression()
+
+model = lr
+model.fit(X_train, y_train)
+model.coef_
+model.intercept_
+
+y_pred=model.predict(X_test)
+plt.scatter(X_test, y_test, color='blue', label='Actual')
+plt.plot(X_test, y_pred, color='red', linewidth=2, label='Predicted')
+plt.xlabel('X')
+plt.ylabel('y')
+plt.title('Regression Predictions')
+plt.legend()
+plt.show()
